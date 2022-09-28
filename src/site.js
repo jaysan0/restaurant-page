@@ -1,7 +1,7 @@
 import "./styles/style.css";
-import startHome from "./home";
-import startMenu from "./menu";
-import startContact from "./contact";
+import { startHome } from "./home";
+import { startMenu } from "./menu";
+import { startContact } from "./contact";
 
 function createTitle() {
   const title = document.createElement("h1");

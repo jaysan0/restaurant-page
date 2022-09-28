@@ -75,10 +75,8 @@ function createMenu() {
   return menuDiv;
 }
 
-function startMenu() {
+export function startMenu() {
   const content = document.getElementById("content");
   content.innerHTML = "";
   content.appendChild(createMenu());
 }
-
-export default startMenu;

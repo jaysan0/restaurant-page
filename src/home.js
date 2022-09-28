@@ -18,10 +18,8 @@ function createHome() {
   return homeDiv;
 }
 
-function startHome() {
+export function startHome() {
   const content = document.getElementById("content");
   content.innerHTML = "";
   content.appendChild(createHome());
 }
-
-export default startHome;

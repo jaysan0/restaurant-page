@@ -51,10 +51,8 @@ function createContact() {
   return contactDiv;
 }
 
-function startContact() {
+export function startContact() {
   const content = document.getElementById("content");
   content.innerHTML = "";
   content.appendChild(createContact());
 }
-
-export default startContact;
