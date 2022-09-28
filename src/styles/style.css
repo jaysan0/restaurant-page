@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+
+html,
+body,
+.container {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+.container {
+  position: relative;
+}
+body {
+  background-color: #101010;
+}
+.title {
+  font-size: 2.5em;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  position: relative;
+  top: 0px;
+  animation: flicker 1.5s infinite alternate;
+}
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow:
+      0 0 4px rgb(255, 0, 0),
+      0 0 11px rgb(255, 0, 0),
+      0 0 19px rgb(255, 0, 0),
+      0 0 40px rgb(255, 0, 0),
+      0 0 80px rgb(255, 0, 0),
+      0 0 90px rgb(255, 0, 0),
+      0 0 100px rgb(255, 0, 0),
+      0 0 150px rgb(255, 0, 0),
+      0 0 200px rgb(255, 0, 0),
+      0 0 250px rgb(255, 0, 0),
+      0 0 300px rgb(255, 0, 0),
+      0 0 350px rgb(255, 0, 0),
+      0 0 400px rgb(255, 0, 0),
+      0 0 420px rgb(255, 0, 0),
+      0 0 450px rgb(255, 0, 0);
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+.nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+}
+.nav-list li {
+  font-size: 1.5em;
+  position: relative;
+}
+.nav-list li a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Squada One', cursive;
+  cursor: pointer;
+  color: #fff;
+}
+.active::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  margin-left: -15px;
+  width: 25px;
+  height: 10px;
+  border-top-left-radius: 110px;
+  border-top-right-radius: 110px;
+  border: 3px solid rgb(250, 187, 79);
+}
+.active::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  margin-left: -15px;
+  width: 25px;
+  height: 10px;
+  border-bottom-left-radius: 110px;
+  border-bottom-right-radius: 110px;
+  border: 3px solid rgb(250, 187, 79);
+}
+.home-div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 30px;
+}
+.home-text {
+  position: relative;
+  font-family: 'Squada One', cursive;
+  text-align: right;
+  max-width: 40vw;
+  font-size: 8vw;
+  color: rgb(187, 186, 186);
+  filter: drop-shadow(7px 7px 7px rgb(73, 73, 73));
+  animation: fadeInText 2s;
+  -webkit-animation: fadeInText 2s;
+  -moz-animation: fadeInText 2s;
+  -o-animation: fadeInText 2s;
+  -ms-animation: fadeInText 2s;
+}
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.home-img {
+  position: relative;
+  width: clamp(200px, 700px, 50vw);
+  filter: brightness(80%);
+  filter: drop-shadow(-15px 20px 8px rgb(34, 31, 27));
+  z-index: 99;
+  margin-left: -5%;
+  animation: fadeInImg 2s;
+  -webkit-animation: fadeInImg 2s;
+  -moz-animation: fadeInImg 2s;
+  -o-animation: fadeInImg 2s;
+  -ms-animation: fadeInImg 2s;
+}
+@keyframes fadeInImg {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.menu-div {
+  position: relative;
+  top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: fadeInMenu 1s;
+  -webkit-animation: fadeInMenu 1s;
+  -moz-animation: fadeInMenu 1s;
+  -o-animation: fadeInMenu 1s;
+  -ms-animation: fadeInMenu 1s;
+}
+@keyframes fadeInMenu {
+  0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+.menu-item {
+  width: 350px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content:end;
+  align-items: center;
+  filter: brightness(30%);
+  cursor: pointer;
+}
+.menu-item:hover {
+  filter: none;
+  transition: 0.3s ease-in-out;
+}
+.menu-img {
+  width: 300px;
+}
+.menu-text {
+  font-family: 'Squada One', cursive;
+  font-size: 2em;
+}
+.contact-div {
+  position: relative;
+  top: 40px;
+  animation: fadeInMenu 1s;
+    -webkit-animation: fadeInMenu 1s;
+    -moz-animation: fadeInMenu 1s;
+    -o-animation: fadeInMenu 1s;
+    -ms-animation: fadeInMenu 1s;
+  }
+  @keyframes fadeInMenu {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+.contact-item {
+  width: 40vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid rgb(250, 187, 79);
+}
+.contact-header {
+  font-family: 'Squada One', cursive;
+  font-size: 2em;
+}
+.contact-text {
+  font-family: 'Squada One', cursive;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+footer {
+  position: fixed;
+  bottom: 8px;
+  left: 10px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Squada One', cursive;
+  color: rgb(139, 139, 139);
+  font-size: em;
+}
