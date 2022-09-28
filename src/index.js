@@ -1,3 +1,3 @@
-import startSite from "./site";
+import { startSite } from "./site";
 
 startSite();

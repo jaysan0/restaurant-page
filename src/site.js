@@ -92,7 +92,7 @@ function createFooter() {
   return footer;
 }
 
-function startSite() {
+export function startSite() {
   const container = document.getElementById("container");
   const body = document.querySelector("body");
 
@@ -103,5 +103,3 @@ function startSite() {
 
   startHome();
 }
-
-export default startSite;
